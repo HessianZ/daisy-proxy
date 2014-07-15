@@ -97,7 +97,7 @@ func (r *Resolver) lookup(msg *dns.Msg, client *dns.Client, server string, edns 
     }
 
     if response == nil {
-        log.Fatal("EEEEEEEEEEEEEE  ", client, server, response, err)
+        err = errors.New("DNS error: no response")
     }
 
     if err != nil {

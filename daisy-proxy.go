@@ -21,13 +21,14 @@ var (
 )
 
 func main() {
-    flag.Parse()
 
-   flag.Usage = func() {
+    flag.Usage = func() {
         fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
         flag.PrintDefaults()
         fmt.Fprintln(os.Stderr, "  -h   : show help usage")
     }
+
+    flag.Parse()
 
     if *ip == "" && *iface != "" {
         *ip = getIpFromInterface(*iface)
@@ -39,6 +40,7 @@ func main() {
     if *dnsServers == "" {
         log.Fatal("DNS servers must be specified")
     }
+
     servers = strings.Split(*dnsServers, " ")
 
     r := &resolver.Resolver{Servers: servers, LocalAddr: *ip}
