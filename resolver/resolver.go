@@ -4,7 +4,7 @@ import (
 	"github.com/miekg/dns"
     "fmt"
     "net"
-    "log"
+    "errors"
 )
 
 var (
