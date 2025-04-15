@@ -21,8 +21,3 @@ Usage of ./daisy-proxy:
 ./daisy-proxy -if ppp0
 2015/04/11 10:15:40 DaisyProxy listen on localhost:8080 outgoing from 10.0.0.60
 ```
-
-### Download
-
-* [DaisyProxy For Mac](http://static.hessian.cn/wp-content/uploads/2014/07/daisy-proxy.gz)
-* [DaisyProxy For Windows 64](http://static.hessian.cn/wp-content/uploads/2014/09/daisy-proxy.7z)
